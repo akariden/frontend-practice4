@@ -1,33 +1,28 @@
+html {
+  font-size: 12px;
+}
+
 body {
   margin: 0;
 }
 
 h1, h2, h3 {
   color: hsl(192, 100%, 9%);
-  font-weight: 700;
   font-family: 'Poppins', sans-serif;
 }
 
-h1 {
-  font-size: 1.5rem;
-}
-
 h2 {
-  font-size: 1.3rem;
-}
-
-h3 {
-  font-size: 1rem;
-  margin: 0.5rem 0;
+  font-size: 1.7em;
+  font-weight: 600;
 }
 
 input {
-  font-size: 0.9em;
+  font-size: 1.1rem;
   font-family: 'Poppins', sans-serif;
 }
 
 p {
-  font-size: 0.9em;
+  font-size: 1.3rem;
   font-family: 'Open Sans', sans-serif;
   color: hsl(208, 11%, 55%);
   line-height: 1.6;
@@ -48,31 +43,36 @@ header {
 
 .header-logo {
   width: 35%;
-  min-width: 150px;
+  min-width: 120px;
 }
 
 .btn {
-  padding: 0.5rem 1.25rem;
   border: none;
   border-radius: 2px;
   outline: none;
 }
 
 .header-btn {
-  color: hsl(265, 100%, 66%);
+  font-size: 0.9em;
+  padding: 0.4em 2em;
+  color: hsl(265, 100%, 40%);
   background-color: #FFF;
-  align-self: stretch;
   box-shadow: 0 0 3px hsl(0, 0%, 80%);
 }
 
 main {
-  width: 83%;
+  width: 80%;
   text-align: center;
   margin: 60px auto;
+  font-size: 1rem;
 }
 
-.outline {
-  margin: 40px 0 60px;
+.outline{
+  margin: 40px auto 60px;
+}
+
+.trial-container{
+  margin: 40px auto 100px;
 }
 
 .mock-img, .user-img{
@@ -80,20 +80,22 @@ main {
 }
 
 .main-btn {
-  margin: 1em auto;
+  /* margin: 1em auto; */
+  margin: 15px 0;
+  padding: 0.8rem 2rem;
   background-color: hsl(322, 100%, 66%);
   color: white;
-  box-shadow: 0 0 3px 0px hsl(322, 100%, 66%);
+  box-shadow: 0 0 6px 2px hsl(322, 100%, 66%);
 }
 
 .details {
-  margin: 60px 0;
+  margin: 60px auto;
   display: flex;
   flex-direction: column;
 }
 
 .user-img {
-  margin: 100px 0;
+  margin: 150px 0 100px;
 }
 
 .contents p {
@@ -105,8 +107,11 @@ main {
   border: none;
   border-radius: 2px;
   box-shadow: 0 0 30px -5px hsl(0, 0%, 80%);
-  font-size: 12px;
-  padding: 10px;
+  padding: 10px 0;
+}
+
+.trial-container > p {
+  font-size: 0.5em;
 }
 
 footer {
@@ -116,11 +121,6 @@ footer {
   text-align: center;
 }
 
-.footer-container {
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-}
 
 .footer-logo {
   width: 50%;
@@ -147,25 +147,27 @@ a {
   margin: 60px auto;
 }
 
-.subsc-header {
+.subscribe > p {
+  font-size: 1.1em;
   color: #fff;
 }
 
-.subscribe p {
-  font-size: 0.85em;
+.subsc-header {
+  color: #fff;
 }
 
 .email-box {
   display: block;
   width: 100%;
-  font-size: 0.9em;
   box-sizing: border-box;
   margin-bottom: 10px;
+  padding: 0.8rem 2rem;
 }
 
 .email-submit {
   background-color: hsl(322, 100%, 66%);
   color: #fff;
+  padding: 0.8rem 2rem;
 }
 
 .fab {
@@ -174,4 +176,114 @@ a {
 
 .copyright p {
   margin: 0;
+  font-size: 0.5em;
+  color: #FFF;
+}
+
+
+/* PC responsive */
+@media screen and (min-width: 720px) {
+  html {
+    font-size: 115%;
+  }
+
+  header {
+    padding: 60px;
+  }
+
+  .header-logo {
+    width: 20%;
+  }
+
+  main {
+    width: 80%;
+    margin: 60px auto;
+  }
+
+  .outline{
+    width: 70%;
+    margin: 100px auto 300px;
+  }
+
+
+  .mock-img {
+    width: 70%;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .user-imag-wrap {
+    flex: 1;
+  }
+
+  .contents {
+    flex: 1.4;
+    font-size: 0.8rem;
+    text-align: left;
+    padding-left: 5%;
+  }
+
+  .trial-container {
+    font-size: 1.5rem;
+    width: 70%;
+    padding: 50px 20px;
+  }
+
+  .trial-container > p{
+    font-size: 1.3rem;
+  }
+
+  footer {
+    text-align: left;
+    padding: 40px 60px 100px;
+  }
+
+  .footer-logo {
+    margin: 20px 0;
+    width: 20%;
+  }
+
+  .footer-container {
+    display: flex;
+  }
+
+  nav {
+    order: 2;
+    flex: 1;
+    display: flex;
+    font-size: 0.9rem;
+  }
+
+  .nav-list {
+    width: 50%;
+  }
+
+  .subscribe {
+    order: 3;
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  .subscribe > h2 {
+    margin: 0;
+
+  }
+
+  .subscribe > p {
+    font-size: 0.9em;
+  }
+
+  .email-submit {
+    width: 50%;
+    float: right;
+  }
+
+  .sns-links {
+    order: 1;
+    flex: 1;
+  }
+
 }
